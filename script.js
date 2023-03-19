@@ -7,6 +7,10 @@ function Book(name, author, pages) {
     this.info = `${this.name} by ${this.author}, ${this.pages} pages.`
 }
 
+function addBookToLibrary() {
+
+}
+
 const sidebar = document.querySelector('.sidebar');
 const grid = document.querySelector('.grid');
 const buttonAddBook = document.querySelector('#addBook');
@@ -21,4 +25,7 @@ buttonAddBook.addEventListener('click', () => {
     myLibrary.push(askBook);
     grid.appendChild(document.createElement('div')).className = 'book';
 });
+
+
+
 
