@@ -1,5 +1,16 @@
+const sidebar = document.querySelector('.sidebar');
+const grid = document.querySelector('.grid');
+const buttonAddBook = document.querySelector('#addBook');
+const buttonNewBook = document.querySelector('#newBook');
+
+// references to input fields
+let bookName = document.querySelector('#bookname');
+let bookAuthor = document.querySelector('#bookauthor');
+let bookPages = document.querySelector('#bookpages');
+
 let myLibrary = [];
 
+// object constructor for books
 function Book(name, author, pages) {
     this.name = name
     this.author = author
@@ -11,20 +22,19 @@ function addBookToLibrary() {
 
 }
 
-const sidebar = document.querySelector('.sidebar');
-const grid = document.querySelector('.grid');
-const buttonAddBook = document.querySelector('#addBook');
-buttonAddBook.addEventListener('click', () => {
-    let askBook = prompt('Tell us the name of your new book:')
-    if (askBook === ""){
-        alert("Sorry, that was an invalid book name.")
-        return;
-    } else if (askBook === null) {
-        return;
+function displayBooks() {
+    for (i = 0; i < myLibrary.length; i++){
+        grid.appendChild(document.createElement('div')).className = 'book';
     }
-    myLibrary.push(askBook);
-    grid.appendChild(document.createElement('div')).className = 'book';
+}
+
+buttonNewBook.addEventListener('click', () => {
+    let showForm = document.querySelector('.bookForm').style.display = 'flex';
 });
+
+myLibrary.push(1);
+displayBooks();
+
 
 
 
