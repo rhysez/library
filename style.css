@@ -32,6 +32,10 @@ body {
     color: white;
 }
 
+.headerButton:hover {
+    background-color: rgb(110, 1, 153);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -53,6 +57,7 @@ body {
     border: solid white 2px;
     font-weight: bold;
     box-shadow: 5px 5px 5px rgb(50, 29, 68);
+    cursor: pointer;
 }
 
 .book:hover {
