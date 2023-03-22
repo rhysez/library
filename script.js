@@ -2,11 +2,7 @@ const sidebar = document.querySelector('.sidebar');
 const grid = document.querySelector('.grid');
 const buttonAddBook = document.querySelector('#addBook');
 const buttonNewBook = document.querySelector('#newBook');
-
-// references to input fields
-let bookName = document.querySelector('#bookname');
-let bookAuthor = document.querySelector('#bookauthor');
-let bookPages = document.querySelector('#bookpages');
+const form = document.querySelector('form');
 
 let myLibrary = [];
 
@@ -28,12 +24,16 @@ function displayBooks() {
     }
 }
 
+
 buttonNewBook.addEventListener('click', () => {
     let showForm = document.querySelector('.bookForm').style.display = 'flex';
 });
 
+// takes input data from form and places into myLibrary[]
 buttonAddBook.addEventListener('click', () => {
     grid.appendChild(document.createElement('div')).className = 'book';
+    let bookName = document.querySelector('#bookname');
+    myLibrary.push(bookName.value);
 })
 
 
