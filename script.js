@@ -32,8 +32,10 @@ buttonNewBook.addEventListener('click', () => {
     let showForm = document.querySelector('.bookForm').style.display = 'flex';
 });
 
-myLibrary.push(1);
-displayBooks();
+buttonAddBook.addEventListener('click', () => {
+    grid.appendChild(document.createElement('div')).className = 'book';
+})
+
 
 
 

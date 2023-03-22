@@ -15,7 +15,7 @@ body {
     background-color: rgb(49, 49, 49, 0.3);
     color: white;
     border-bottom: solid rgb(255, 255, 255) 2px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 10vh;
 }
@@ -68,6 +68,7 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 90vh;
     width: 300px;
     background-color: rgb(49, 49, 49, 0.3);
@@ -76,8 +77,7 @@ body {
 
 #newBook {
     margin-top: 20px;
-    margin-left: 25px;
-    width: 240px;
+    width: 175px;
     font-size: larger;
 }
 
