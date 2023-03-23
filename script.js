@@ -4,10 +4,13 @@ const buttonAddBook = document.querySelector('#addBook');
 const buttonNewBook = document.querySelector('#newBook');
 const buttonUpdate = document.querySelector('#update');
 const form = document.querySelector('form');
+const book = document.querySelector('.book');
 
 let bookTitle = document.querySelector('#booktitle');
 let bookAuthor = document.querySelector('#bookauthor')
 let bookPages = document.querySelector('#bookpages');
+let bookRead = document.querySelector('#bookread');
+let bookFav = document.querySelector('#bookfav');
 
 let myLibrary = [];
 let bookStorage = [];
@@ -18,22 +21,24 @@ buttonNewBook.addEventListener('click', () => {
 
 // takes input data from form and places into myLibrary[]
 buttonAddBook.addEventListener('click', () => {
-    grid.appendChild(document.createElement('div')).className = 'book';
-    grid.lastChild.textContent = bookTitle.value;
     bookStorage.push(bookTitle.value);
     addBookToLibrary();
 })
 
 // object constructor for books
-function Book(title, author, pages) {
+function Book(title, author, pages, fav, read) {
     this.title = title
     this.author = author
     this.pages = pages
+    this.fav = fav
+    this.read = read
 }
 
 function addBookToLibrary() {
-    let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value);
+    let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, bookFav.value, bookRead.value);
     myLibrary.push(newBook);
+    grid.appendChild(document.createElement('div')).className = 'book';
+    grid.lastChild.textContent = bookTitle.value;
 }
 
 function displayBooks() {
