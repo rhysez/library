@@ -15,6 +15,7 @@ let bookFav = document.querySelector('#bookfav');
 let myLibrary = [];
 let bookStorage = [];
 
+// makes form appear on page
 buttonNewBook.addEventListener('click', () => {
     form.style.display = 'flex';
 });
