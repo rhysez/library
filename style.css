@@ -94,12 +94,6 @@ body {
     font-weight: bold;
 }
 
-#bookread,
-#bookfav {
-    height: 20px;
-    width: 20px;
-}
-
 input {
     border-radius: 5px;
     border: none;
