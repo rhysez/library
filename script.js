@@ -2,7 +2,6 @@ const sidebar = document.querySelector('.sidebar');
 const grid = document.querySelector('.grid');
 const buttonAddBook = document.querySelector('#addBook');
 const buttonNewBook = document.querySelector('#newBook');
-const buttonUpdate = document.querySelector('#update');
 const form = document.querySelector('form');
 const book = document.querySelector('.book');
 const clear = document.querySelector("#clear");
@@ -39,6 +38,9 @@ function addBookToLibrary() {
     myLibrary.push(newBook);
     grid.appendChild(document.createElement('div')).className = 'book';
     grid.lastChild.textContent = bookTitle.value;
+    if (bookRead.value === 'yes') {
+        grid.lastChild.style.backgroundColor = 'lightgreen';
+    }
 }
 
 function submitForm(event){
