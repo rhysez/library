@@ -38,8 +38,9 @@ function addBookToLibrary() {
     myLibrary.push(newBook);
     grid.appendChild(document.createElement('div')).className = 'book';
     grid.lastChild.textContent = bookTitle.value;
+    grid.lastChild.style.color = 'black';
     if (bookRead.value === 'yes') {
-        grid.lastChild.style.backgroundColor = 'lightgreen';
+        grid.lastChild.style.boxShadow = '10px 10px lightgreen';
     }
 }
 
