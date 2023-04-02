@@ -94,6 +94,10 @@ body {
     font-weight: bold;
 }
 
+#clear {
+    margin-top: 50px;
+}
+
 input {
     border-radius: 5px;
     border: none;
