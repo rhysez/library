@@ -5,6 +5,7 @@ const buttonNewBook = document.querySelector('#newBook');
 const buttonUpdate = document.querySelector('#update');
 const form = document.querySelector('form');
 const book = document.querySelector('.book');
+const clear = document.querySelector("#clear");
 
 let bookTitle = document.querySelector('#booktitle');
 let bookAuthor = document.querySelector('#bookauthor')
@@ -40,16 +41,17 @@ function addBookToLibrary() {
     grid.lastChild.textContent = bookTitle.value;
 }
 
-function displayBooks() {
-    for (i = 0; i < myLibrary.length; i++){
-        grid.appendChild(document.createElement('div')).className = 'book';
-    }
-}
-
 function submitForm(event){
     //Preventing page refresh
     event.preventDefault();
 }
+
+clear.addEventListener('click', () => {
+    myLibrary = [];
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild);
+      }
+});
 
 form.addEventListener('submit', submitForm);
 
