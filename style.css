@@ -63,7 +63,7 @@ span {
     box-shadow: 10px 10px rgb(169, 0, 236);
     cursor: pointer;
     transition: all .2s ease-in-out;
-    color: white;
+    color: black;
     font-size: x-large;
 }
 
@@ -100,6 +100,20 @@ span {
 
 #clear {
     margin-top: 50px;
+}
+
+.markRead {
+    border-radius: 40%;
+    background-color: rgb(169, 0, 236);
+    color: white;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    bottom: 100px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
