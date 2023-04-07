@@ -37,9 +37,27 @@ function addBookToLibrary() {
     let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value);
     myLibrary.push(newBook);
     const bookCard = document.createElement('div');
+    const markRead = document.createElement('div');
     bookCard.classList.add('book');
     bookCard.textContent = `${bookTitle.value}`;
+    bookCard.addEventListener('click', () => {
+        alert(newBook.info);
+    })
+    if (bookRead.value === "yes") {
+        newBook.read = true;
+        if (newBook.read = true) {
+            bookCard.style.boxShadow = "10px 10px lightgreen";
+        }
+    }
+    markRead.textContent = "✔️";
+    markRead.classList.add('markRead');
+    markRead.addEventListener('click', () => {
+        newBook.read = true;
+        bookCard.style.boxShadow = "10px 10px lightgreen";
+        markRead.style.backgroundColor = "lightgreen";
+    })
     grid.appendChild(bookCard);
+    bookCard.appendChild(markRead);
 }
 
 function submitForm(event){
