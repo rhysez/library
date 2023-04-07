@@ -56,6 +56,7 @@ function addBookToLibrary() {
         newBook.read = true;
         bookCard.style.boxShadow = "10px 10px lightgreen";
         markRead.style.backgroundColor = "lightgreen";
+        alert(`You have now read ${bookTitle.value}`);
     })
     grid.appendChild(bookCard);
     bookCard.appendChild(markRead);
