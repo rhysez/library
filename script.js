@@ -42,14 +42,6 @@ function addBookToLibrary() {
         grid.lastChild.style.boxShadow = '10px 10px lightgreen';
         newBook.read = true;
     }
-    document.querySelector('.book').appendChild(document.createElement('div')).className = 'markRead';
-    document.querySelector('.markRead').textContent = '?';
-    document.querySelector('.markRead').addEventListener('click', () => {
-        newBook.read = true;
-    })
-    if (newBook.read === true) {
-        grid.lastChild.style.boxShadow = '10px 10px lightgreen';
-    }
 }   
 
 function submitForm(event){
