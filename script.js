@@ -36,13 +36,11 @@ function Book(title, author, pages) {
 function addBookToLibrary() {
     let newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value);
     myLibrary.push(newBook);
-    grid.appendChild(document.createElement('div')).className = 'book';
-    grid.lastChild.textContent = bookTitle.value;
-    if (bookRead.value === 'yes') {
-        grid.lastChild.style.boxShadow = '10px 10px lightgreen';
-        newBook.read = true;
-    }
-}   
+    const bookCard = document.createElement('div');
+    bookCard.classList.add('book');
+    bookCard.textContent = `${bookTitle.value}`;
+    grid.appendChild(bookCard);
+}
 
 function submitForm(event){
     //Preventing page refresh
