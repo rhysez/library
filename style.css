@@ -103,11 +103,10 @@ span {
 }
 
 .markRead {
-    border-radius: 40%;
     background-color: rgb(169, 0, 236);
     color: white;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     position: relative;
     bottom: 100px;
     left: 15px;
