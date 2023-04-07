@@ -47,6 +47,7 @@ function addBookToLibrary() {
         newBook.read = true;
         if (newBook.read = true) {
             bookCard.style.boxShadow = "10px 10px lightgreen";
+            markRead.style.backgroundColor = "lightgreen";
         }
     }
     markRead.textContent = "✔️";
