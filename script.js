@@ -24,13 +24,15 @@ buttonAddBook.addEventListener('click', () => {
     addBookToLibrary();
 })
 
-// object constructor for books
-function Book(title, author, pages) {
-    this.title = title
-    this.author = author
-    this.pages = pages + " pages"
-    this.read = false
-    this.info = `This book is titled ${this.title} and is written by ${this.author}. It has ${this.pages}.`
+// class constructor for books
+class Book {
+    constructor (title, author, pages){
+        this.title = title
+        this.author = author
+        this.pages = pages + " pages"
+        this.read = false
+        this.info = `This book is titled ${this.title} and is written by ${this.author}. It has ${this.pages}.`
+    }
 }
 
 function addBookToLibrary() {
