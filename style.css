@@ -59,21 +59,22 @@ span {
     flex-wrap: wrap;
     word-wrap: break-word;
     gap: 25px;
-    background-color: rgb(218, 218, 218);
+    background-color: rgba(68, 68, 68, 0.3);
+    border: solid 1px white;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: bold;
-    box-shadow: 10px 10px rgb(169, 0, 236);
     cursor: pointer;
     transition: all .2s ease-in-out;
-    color: black;
+    color: snow;
     font-size: x-large;
 }
 
 .book:hover {
     transform: scale(1.05);
-    background-color: snow;
+    background-color: rgba(97, 97, 97, 0.3);
 }
 
 .sidebar {
@@ -107,10 +108,11 @@ span {
 }
 
 .markRead {
-    background-color: rgb(169, 0, 236);
     color: white;
     width: 30px;
     height: 30px;
+    border-radius: 5px;
+    border: solid 1px white;
 }
 
 input {
@@ -118,6 +120,14 @@ input {
     border: none;
     height: 30px;
     font-size: medium;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid green;
 }
 
 .main {

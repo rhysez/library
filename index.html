@@ -19,13 +19,13 @@
             <button class="headerButton" id="newBook">Got a new book?</button>
             <form class="bookForm">
                 <label for="booktitle">Title</label>
-                <input type="text" name="booktitle" id="booktitle" required>
+                <input type="text" name="booktitle" id="booktitle" minlength="1" maxlength="30" required>
 
                 <label for="bookauthor">Author</label>
-                <input type="text" name="bookauthor" id="bookauthor" required>
+                <input type="text" name="bookauthor" id="bookauthor" minlength="1" maxlength="30" required>
 
                 <label for="bookpages">Pages</label>
-                <input type="number" name="bookpages" id="bookpages" required>
+                <input type="number" name="bookpages" id="bookpages" min="1" required>
 
                 <label for="bookread">Have you read this book?</label>
                 <select name="bookread" id="bookread">

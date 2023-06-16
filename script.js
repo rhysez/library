@@ -21,7 +21,11 @@ buttonNewBook.addEventListener('click', () => {
 
 // takes input data from form and places into myLibrary[]
 buttonAddBook.addEventListener('click', () => {
-    addBookToLibrary();
+    if (bookTitle.value === "" || bookAuthor.value === "" || bookPages.value === ""){
+        return;
+    } else {
+        addBookToLibrary();
+    }
 })
 
 // class constructor for books
@@ -55,6 +59,7 @@ function addBookToLibrary() {
     markRead.textContent = "✔️";
     markRead.classList.add('markRead');
     markRead.addEventListener('click', () => {
+        event.stopPropagation();
         newBook.read = true;
         bookCard.style.boxShadow = "10px 10px lightgreen";
         markRead.style.backgroundColor = "lightgreen";
@@ -67,6 +72,7 @@ function addBookToLibrary() {
 function submitForm(event){
     //Preventing page refresh
     event.preventDefault();
+
 }
 
 clear.addEventListener('click', () => {
