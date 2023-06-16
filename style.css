@@ -43,8 +43,8 @@ span {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: 1fr;
     max-height: 90vh;
     grid-gap: 20px;
@@ -66,15 +66,10 @@ span {
     font-weight: bold;
     cursor: pointer;
     transition: all .2s ease-in-out;
-<<<<<<< HEAD
     color: snow;
     font-size: x-large;
-=======
-    color: black;
-    font-size: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
->>>>>>> 43009c04cde1d75c05eafaf77a89c24e1d8d6017
+    max-width: 10rem;
+    padding: 20px;
 }
 
 .book:hover {
@@ -115,15 +110,10 @@ span {
 
 .markRead {
     color: white;
-<<<<<<< HEAD
     width: 30px;
     height: 30px;
     border-radius: 5px;
     border: solid 1px white;
-=======
-    max-width: 30px;
-    max-height: 30px;
->>>>>>> 43009c04cde1d75c05eafaf77a89c24e1d8d6017
 }
 
 input {
