@@ -4,6 +4,7 @@ const buttonAddBook = document.querySelector('#addBook');
 const buttonNewBook = document.querySelector('#newBook');
 const form = document.querySelector('form');
 const book = document.querySelector('.book');
+const close = document.querySelector('#close')
 const clear = document.querySelector("#clear");
 const markRead = document.querySelector('.markRead');
 
@@ -14,21 +15,25 @@ let bookRead = document.querySelector('#bookread');
 
 let myLibrary = [];
 
-// makes form appear on page
 buttonNewBook.addEventListener('click', () => {
     form.style.display = 'flex';
 });
 
-// takes input data from form and places into myLibrary[]
+close.addEventListener('click', () => {
+    form.style.display = 'none';
+})
+
 buttonAddBook.addEventListener('click', () => {
     if (bookTitle.value === "" || bookAuthor.value === "" || bookPages.value === ""){
+        return;
+    } else if (myLibrary.length === 20) {
+        alert('You have the maximum amount of books in your library! Consider clearing your library.')
         return;
     } else {
         addBookToLibrary();
     }
 })
 
-// class constructor for books
 class Book {
     constructor (title, author, pages){
         this.title = title
@@ -70,7 +75,6 @@ function addBookToLibrary() {
 }
 
 function submitForm(event){
-    //Preventing page refresh
     event.preventDefault();
 
 }

@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 500px){
+    .main {
+        flex-direction: column;
+    }
+    #sidebar {
+        border-bottom: solid rgb(255, 255, 255) 1px;
+        border-right: 0;
+    }
+    #grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 body {
     background-image: linear-gradient(180deg, #18181b, #3f3f46);
     margin: 0;
@@ -14,14 +27,13 @@ body {
     background-color: rgb(49, 49, 49, 0.3);
     color: white;
     border-bottom: solid rgb(255, 255, 255) 1px;
-    justify-content: space-between;
+    justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
     align-items: center;
 }
 
 .headerButton {
-    max-height: 40px;
     max-width: 100px;
     border: solid white 1px;
     border-radius: 5px;
@@ -81,8 +93,6 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    max-width: 300px;
     background-color: rgb(49, 49, 49, 0.3);
     border-right: solid rgb(255, 255, 255) 1px;
     padding-left: 1rem;
@@ -94,7 +104,7 @@ span {
     max-width: 175px;
 }
 
-.bookForm {
+form {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -104,8 +114,13 @@ span {
     font-weight: bold;
 }
 
+#close {
+    margin-top: 20px;
+}
+
 #clear {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .markRead {
@@ -133,5 +148,5 @@ input:valid {
 
 .main {
    display: flex;
-   min-height: 90vh;
+   min-height: 100vh;
 }
